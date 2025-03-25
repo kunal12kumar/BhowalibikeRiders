@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import ntorq from "@/assests/ntorqimage.avif";
 import mestro from "@/assests/MESTRO1.avif";
 import extreme from "@/assests/EXTREME.avif";
+import Link from 'next/link';
 
 
 
@@ -84,17 +85,17 @@ export default function Bookingpage() {
                     </div>
                     <div className="flex justify-between items-center mb-3">
                         <div>
-                            <p className="text-green-600 font-bold text-xl">₹ {bike.price}</p>
-                            <p className="text-xs text-gray-500"><strong>overnight_price: ₹ {bike.overnight_price}</strong></p>
+                            <p className="text-green-600 font-bold text-xl">₹ {bike.price} /day from {bike.time} </p>
+                            <p className="text-xs text-[blue] text-[10px]"><strong>overnight_price: ₹ {bike.overnight_price}</strong></p>
                         </div>
                        
                     </div>
                     <div className="flex justify-between text-gray-600 text-sm">
                       
-                        <p>Petrol: <span className="font-semibold">300ml prefiled</span></p>
-                        <Button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                        <p>Petrol: <span className="font-semibold text-black">300ml prefiled</span></p>
+                        <Link href={'https://forms.gle/oPjbqacBYB52DvyR9'}><Button className="bg-green-500 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-green-600">
                             Book Now
-                        </Button>
+                        </Button></Link>
                     </div>
                 </div>
             ))}
