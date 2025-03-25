@@ -8,7 +8,7 @@ import { ImagesSlider } from "@/components/ui/images-slider";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
-import { Calendar } from "@/components/ui/calendar"
+
 import Link from "next/link";
 
 
