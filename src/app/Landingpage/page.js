@@ -8,6 +8,9 @@ import { ImagesSlider } from "@/components/ui/images-slider";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
+import { Calendar } from "@/components/ui/calendar"
+import Link from "next/link";
+
 
 
 
@@ -21,6 +24,10 @@ import { MdOutlineCalendarMonth } from "react-icons/md";
 
 export default function Landingpage() {
     const words = ["Nainital", "Ranikhet", "Mukteshwar", "Bhimtal", "Corbett National Park",];
+
+    // for date picker
+    const [date, setDate] = useState(new Date());
+
 
     // creating the array of images
     const images = [
@@ -93,10 +100,10 @@ export default function Landingpage() {
                             <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
                                 Nature is Calling! Say Yes to Adventure – Book Now and Explore!
                             </motion.p>
-                            <button className="px-4 cursor-pointer py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+                            <Link href={'/Bookingpage'}><button className="px-4 cursor-pointer sm:hover:scale-110 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
                                 <span>Book Now →</span>
                                 <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-                            </button>
+                            </button></Link>
                         </motion.div>
                     </ImagesSlider>
 
@@ -111,57 +118,13 @@ export default function Landingpage() {
                     <h1>With <strong className="text-[#130080]">BhowaliBikeRiders</strong></h1>
 
 
-                    <button className="px-4 py-2 cursor-pointer  text-black border text-2xl  bg-[#43d343] mx-auto text-center rounded-full relative mt-4">
+                    <Link href={'/Bookingpage'}><button className="px-4 py-2 cursor-pointer sm:hover:scale-110  text-black border text-2xl  bg-[#43d343] mx-auto text-center rounded-full relative mt-4">
                         <span>Book Now →</span>
                         <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-                    </button>
+                    </button></Link>
 
 
-                    {/* date starts here */}
-
-                    <div className="bg-white p-6   text-xl shadow-md rounded-lg max-w-md mx-auto">
-                        {/* City Selection */}
-                        <div className="relative mb-4">
-                            <input
-                                type="text"
-                                placeholder="Select City"
-                                className="w-full p-3 border rounded-md pl-10 text-gray-600 bg-gray-100"
-                            />
-                            <FaMapMarkerAlt className="absolute top-3 left-3 text-green-500" />
-                        </div>
-
-                        {/* Start Date & Time */}
-                        <div className="relative mb-4">
-                            <input
-                                type="datetime-local"
-                                value={startDate}
-                                onChange={handleStartDateChange}
-                                min={getCurrentDateTime()} // Restrict past dates
-                                className="w-full p-3 border rounded-md pl-10 text-gray-600 bg-gray-100"
-                            />
-                            <MdOutlineCalendarMonth className="absolute top-3 left-3 text-green-500 text-lg" />
-                        </div>
-
-                        {/* End Date & Time */}
-                        <div className="relative mb-4">
-                            <input
-                                type="datetime-local"
-                                value={endDate}
-                                onChange={handleEndDateChange}
-                                min={startDate} // Ensure end date is not before start date
-                                className="w-full p-3 border rounded-md pl-10 text-gray-600 bg-gray-100"
-                            />
-                            <FaCalendarAlt className="absolute top-3 left-3 text-red-500 text-lg" />
-                        </div>
-
-                        {/* Duration */}
-                        <p className="text-gray-600 mb-4">Duration: {calculateDuration()} Day(s)</p>
-
-                        {/* Search Button */}
-                        <button className="w-full bg-green-500 text-white py-3 rounded-md font-semibold hover:bg-green-600 transition">
-                            Search
-                        </button>
-                    </div>
+                    
 
 
                 </div>
