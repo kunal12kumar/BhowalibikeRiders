@@ -74,7 +74,7 @@ export default function Landingpage() {
     return (
         <div className="h-auto">
             {/* here we are dividing the page into two half */}
-            <div className="grid sm:grid-cols-2 w-full sm:h-screen  sm:gap-[80px]">
+            <div className="grid sm:grid-cols-2 w-full sm:h-screen  sm:gap-[80px] gap-12 ">
                 {/* in this we will use the component of acceternity  */}
 
 
@@ -82,7 +82,7 @@ export default function Landingpage() {
 
                 <div className="relative w-full h-full">
 
-                    <ImagesSlider className=" sm:h-[100%]  h-[400px] w-full" images={images}>
+                    <ImagesSlider className=" sm:h-[100%]  h-[600px] w-full" images={images}>
                         <motion.div
                             initial={{
                                 opacity: 0,
@@ -95,9 +95,9 @@ export default function Landingpage() {
                             transition={{
                                 duration: 0.6,
                             }}
-                            className="z-50 flex flex-col justify-center items-center"
+                            className="z-80 flex flex-col justify-center items-center"
                         >
-                            <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+                            <motion.p className="font-bold sm:text-xl text-2xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
                                 Nature is Calling! Say Yes to Adventure – Book Now and Explore!
                             </motion.p>
                             <Link href={'/Bookingpage'}><button className="px-4 cursor-pointer sm:hover:scale-110 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
