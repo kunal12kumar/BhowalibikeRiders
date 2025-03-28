@@ -10,6 +10,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 
 import Link from "next/link";
+import ContactPage from "../showgoolemap/page";
 
 
 
@@ -124,13 +125,20 @@ export default function Landingpage() {
                     </button></Link>
 
 
-                    
+
+
+
+
 
 
                 </div>
 
 
 
+            </div>
+
+            <div className="w-full  text-center my-10">
+                <ContactPage></ContactPage>
             </div>
 
         </div>
