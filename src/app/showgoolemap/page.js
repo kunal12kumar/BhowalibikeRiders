@@ -13,8 +13,7 @@ export default function ContactPage() {
         <title>Contact Us | Bhowali Bike Riders</title>
       </Head>
       <div className="container mx-auto p-5">
-        <h1 className="text-2xl font-bold">Visit Our Office</h1>
-        <p>Find us at our physical location:</p>
+        <h1 className="text-2xl mb-5 font-bold">Visit Our Office</h1>
         <GoogleMapComponent />
       </div>
     </>

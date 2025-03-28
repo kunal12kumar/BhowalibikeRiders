@@ -7,8 +7,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 25.58301737126908, // Replace with your office latitude  
-  lng: 85.04771061018901, // Replace with your office longitude
+  lat: 29.386259802240843, // Replace with your office latitude  29.386259802240843, 79.51407294083182
+  lng: 79.51407294083182, // Replace with your office longitude
 };
 
 const GoogleMapComponent = () => {
@@ -35,7 +35,7 @@ const GoogleMapComponent = () => {
       </GoogleMap>
 
       <button
-        className="mt-3 cursor-pointer px-4 py-2 bg-blue-500 text-white rounded"
+        className="mt-3 cursor-pointer sm:hover:scale-110 px-4 py-2 bg-blue-500 text-white rounded"
         onClick={getDirections}
       >
         Get Directions

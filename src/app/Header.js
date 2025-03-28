@@ -13,12 +13,12 @@ export default function Header() {
             {/* creating header part */}
 
             <div className="navbar flex justify-between sm:px-10 fixed bg-white shadow-sm z-[50]">
-                <a className="btn text-xl bg-amber-400 border-[white]">BhowaliBikeRiders</a>
+                <Link href={'/'}><h1 className="btn text-xl bg-amber-400 border-[white]">BhowaliBikeRiders</h1></Link>
                 <div>
                     <div className="flex items-center space-x-2 text-black">
                         <FaPhoneAlt className="text-green-500 text-lg" />
                         <a href="tel:+917870304944" className="text-lg font-medium">
-                            +91-7870304944
+                            +91-8923842659
                         </a>
                     </div>
                 </div>
